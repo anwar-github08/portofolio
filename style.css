@@ -117,6 +117,9 @@ img {
 .twitter {
   background: linear-gradient(45deg, rgb(8, 64, 110), rgb(90, 130, 224));
   box-shadow: 0 1px 40px rgb(8, 64, 110);
+  animation: name duration timing-function delay iteration-count direction
+    fill-mode;
+  animation: twitteranimation ease-in 5s 2s 4 alternate;
 }
 
 .twitter:hover {
@@ -126,6 +129,7 @@ img {
 .wa {
   background: linear-gradient(45deg, rgb(8, 110, 66), rgb(90, 224, 193));
   box-shadow: 0 1px 40px rgb(8, 110, 66);
+  animation: waanimation ease-in 3s 19s infinite alternate;
 }
 
 .wa:hover {
@@ -135,10 +139,40 @@ img {
 .github {
   background: linear-gradient(45deg, rgb(0, 0, 0), rgb(146, 150, 159));
   box-shadow: 0 1px 40px rgb(0, 0, 0);
+  animation: githubanimation ease-in 5s 2s 4 alternate;
 }
 
 .github:hover {
   transform: scale(1.1);
+}
+
+@keyframes twitteranimation {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 220px;
+    background: linear-gradient(45deg, rgb(0, 0, 0), rgb(146, 150, 159));
+    box-shadow: 0 1px 40px rgb(0, 0, 0);
+  }
+}
+@keyframes waanimation {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 20px;
+  }
+}
+@keyframes githubanimation {
+  from {
+    left: 0px;
+  }
+  to {
+    left: -220px;
+    background: linear-gradient(45deg, rgb(8, 64, 110), rgb(90, 130, 224));
+    box-shadow: 0 1px 40px rgb(8, 64, 110);
+  }
 }
 
 @media screen and (max-width: 576px) {
